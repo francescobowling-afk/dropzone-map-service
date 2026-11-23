@@ -99,6 +99,14 @@ def parse_verified(payload, default_source='Fonte verificata'):
         raise ValueError('Il feed deve contenere items[]')
     result = []
     for item in payload['items'][:2500]:
+        # Non mostrare schede stagionali dopo la scadenza: restano consultabili
+        # nel sorgente, ma non vengono più pubblicate sul feed attivo.
+        if isinstance(item, dict) and item.get('validUntil'):
+            try:
+                if datetime.date.fromisoformat(item['validUntil']) < datetime.datetime.now(datetime.timezone.utc).date():
+                    continue
+            except (TypeError, ValueError):
+                continue
         if not isinstance(item, dict) or item.get('kind') not in KINDS or not text(item.get('name')):
             continue
         url = text(item.get('sourceUrl'), 500)
@@ -139,7 +147,7 @@ def main():
     if npc_url:
         jobs.append(('npc', npc_url, lambda data: [p for p in parse_verified(data, 'Feed NPC') if p['kind'] == 'NPC'], 'Feed NPC'))
     else:
-        statuses['npc'] = {'ok': False, 'checkedAt': NOW, 'error': 'Nessuna fonte NPC verificata configurata'}
+        statuses['npc'] = {'ok': False, 'checkedAt': NOW, 'error': 'Nessuna API NPC automatica configurata; controllare npcCurated per le schede editoriali'}
 
     for name, url, parser, source in jobs:
         try:
@@ -157,6 +165,8 @@ def main():
         curated = load_curated()
         fresh.extend(curated)
         statuses['curated'] = {'ok': True, 'checkedAt': NOW, 'count': len(curated)}
+        statuses['npcCurated'] = {'ok': True, 'checkedAt': NOW, 'count': sum(p.get('kind') == 'NPC' for p in curated), 'mode': 'schede editoriali, non feed automatico'}
+        statuses['hiddenCurated'] = {'ok': True, 'checkedAt': NOW, 'count': sum(p.get('kind') == 'Luoghi nascosti' for p in curated)}
     except Exception as error:
         statuses['curated'] = {'ok': False, 'checkedAt': NOW, 'error': str(error)[:120]}
         fresh.extend(item for item in previous if item.get('source') not in ('Fortnite-API', 'FN Api', 'Feed NPC'))
@@ -179,4 +189,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
