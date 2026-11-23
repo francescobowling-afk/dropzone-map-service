@@ -1,22 +1,22 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-11-23T01:45:55.799657+00:00",
-  "lastSuccessfulDataAt": "2026-11-23T01:45:55.799657+00:00",
+  "generatedAt": "2026-11-23T01:50:37.323270+00:00",
+  "lastSuccessfulDataAt": "2026-11-23T01:50:37.323270+00:00",
   "sourceStatus": {
     "map": {
       "ok": true,
-      "checkedAt": "2026-11-23T01:45:55.799657+00:00",
+      "checkedAt": "2026-11-23T01:50:37.323270+00:00",
       "count": 16
     },
     "quests": {
       "ok": true,
-      "checkedAt": "2026-11-23T01:45:55.799657+00:00",
+      "checkedAt": "2026-11-23T01:50:37.323270+00:00",
       "count": 1200
     },
     "curated": {
-      "ok": false,
-      "checkedAt": "2026-11-23T01:45:55.799657+00:00",
-      "error": "[Errno 2] No such file or directory: '/home/runner/work/dropzone-map-service/dropzone-map-service/data/verified-points.j"
+      "ok": true,
+      "checkedAt": "2026-11-23T01:50:37.323270+00:00",
+      "count": 0
     }
   },
   "items": [
