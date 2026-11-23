@@ -1,26 +1,26 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-11-23T02:25:54.914440+00:00",
-  "lastSuccessfulDataAt": "2026-11-23T02:25:54.914440+00:00",
+  "generatedAt": "2026-11-23T02:32:17.899080+00:00",
+  "lastSuccessfulDataAt": "2026-11-23T02:32:17.899080+00:00",
   "sourceStatus": {
     "npc": {
       "ok": false,
-      "checkedAt": "2026-11-23T02:25:54.914440+00:00",
+      "checkedAt": "2026-11-23T02:32:17.899080+00:00",
       "error": "Nessuna fonte NPC verificata configurata"
     },
     "map": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:25:54.914440+00:00",
+      "checkedAt": "2026-11-23T02:32:17.899080+00:00",
       "count": 16
     },
     "quests": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:25:54.914440+00:00",
+      "checkedAt": "2026-11-23T02:32:17.899080+00:00",
       "count": 1200
     },
     "curated": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:25:54.914440+00:00",
+      "checkedAt": "2026-11-23T02:32:17.899080+00:00",
       "count": 0
     }
   },
