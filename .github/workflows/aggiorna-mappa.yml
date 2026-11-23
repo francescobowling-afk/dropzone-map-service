@@ -38,3 +38,4 @@ jobs:
             git commit -m "Aggiornamento automatico dati mappa"
             git push
           fi
+
