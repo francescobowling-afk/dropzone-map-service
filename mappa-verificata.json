@@ -1,37 +1,37 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-11-23T02:53:51.405175+00:00",
-  "lastSuccessfulDataAt": "2026-11-23T02:53:51.405175+00:00",
+  "generatedAt": "2026-11-23T03:15:20.311205+00:00",
+  "lastSuccessfulDataAt": "2026-11-23T03:15:20.311205+00:00",
   "sourceStatus": {
     "npc": {
       "ok": false,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "error": "Nessuna API NPC automatica configurata; controllare npcCurated per le schede editoriali"
     },
     "map": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "count": 16
     },
     "quests": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "count": 1200
     },
     "curated": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "count": 14
     },
     "npcCurated": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "count": 11,
       "mode": "schede editoriali, non feed automatico"
     },
     "hiddenCurated": {
       "ok": true,
-      "checkedAt": "2026-11-23T02:53:51.405175+00:00",
+      "checkedAt": "2026-11-23T03:15:20.311205+00:00",
       "count": 3
     }
   },
@@ -40,129 +40,193 @@
       "id": "poi:Athena.Location.POI.Generic.07",
       "kind": "Location",
       "name": "Lantern Landing",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.39459,
+      "y": 0.59365
     },
     {
       "id": "poi:Athena.Location.UnNamedPOI.Landmark.05",
       "kind": "Location",
       "name": "Baratie",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.82136,
+      "y": 0.23773
     },
     {
       "id": "poi:Athena.Location.POI.Generic.10",
       "kind": "Location",
       "name": "Rubber Resort",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.32712,
+      "y": 0.87
     },
     {
       "id": "poi:Athena.Location.POI.Generic.11",
       "kind": "Location",
       "name": "Plunder Port",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.60416,
+      "y": 0.13
     },
     {
       "id": "poi:Athena.Location.POI.Generic.13",
       "kind": "Location",
       "name": "The Chest",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.28086,
+      "y": 0.73887
     },
     {
       "id": "poi:Athena.Location.POI.Generic.01",
       "kind": "Location",
       "name": "Arlong Park",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.17478,
+      "y": 0.53234
     },
     {
       "id": "poi:Athena.Location.POI.Generic.05",
       "kind": "Location",
       "name": "Windmill Village",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.27448,
+      "y": 0.27044
     },
     {
       "id": "poi:Athena.Location.UnNamedPOI.Landmark.07",
       "kind": "Location",
       "name": "Nami's Tangerine Grove",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.23754,
+      "y": 0.16767
     },
     {
       "id": "poi:Athena.Location.UnNamedPOI.Landmark.03",
       "kind": "Location",
       "name": "Henry",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.64819,
+      "y": 0.21811
     },
     {
       "id": "poi:Athena.Location.POI.Generic.02",
       "kind": "Location",
       "name": "The $.$. Rocky",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.82522,
+      "y": 0.45433
     },
     {
       "id": "poi:Athena.Location.POI.Generic.03",
       "kind": "Location",
       "name": "Busy Bay",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.80209,
+      "y": 0.23385
     },
     {
       "id": "poi:Athena.Location.POI.Generic.04",
       "kind": "Location",
       "name": "Cursed Cavern",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.63237,
+      "y": 0.51204
     },
     {
       "id": "poi:Athena.Location.UnNamedPOI.Landmark.01",
       "kind": "Location",
       "name": "Giant's Battlefield",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.43948,
+      "y": 0.43256
     },
     {
       "id": "poi:Athena.Location.POI.Generic.09",
       "kind": "Location",
       "name": "Buggy's Beachhead",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.50489,
+      "y": 0.75922
     },
     {
       "id": "poi:Athena.Location.UnNamedPOI.Landmark.04",
       "kind": "Location",
       "name": "The Salty Skull",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.65064,
+      "y": 0.44813
     },
     {
       "id": "poi:Athena.Location.POI.Generic.08",
       "kind": "Location",
       "name": "Loguetown",
-      "description": "Punto di interesse riportato da Fortnite-API",
+      "description": "Punto d’interesse riportato da Fortnite-API",
       "source": "Fortnite-API",
-      "sourceUrl": "https://fortnite-api.com/v1/map"
+      "sourceUrl": "https://fortnite-api.com/v1/map",
+      "accuracy": "approximate",
+      "projection": "poi-bounds-estimate",
+      "x": 0.46953,
+      "y": 0.31661
     },
     {
       "id": "quest:quest:accolade_bb_combat_rightbackatyou",
@@ -10973,7 +11037,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Apri un Rift; cerca lungo la strada a nord-est della villa.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.32712,
+      "y": 0.87,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:cap-n-hatsune-miku",
@@ -10984,7 +11052,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca sul tetto dell’edificio nella zona nord-est. Può offrire uno Sprite limitato.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.32712,
+      "y": 0.87,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:treasure-hunter-hope",
@@ -10995,7 +11067,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Reclutamento specialista · Specialista esploratrice reclutabile; controlla gli edifici e il molo della zona.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.39459,
+      "y": 0.59365,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:charlotte-sensei",
@@ -11006,7 +11082,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Reclutamento specialista · Specialista rifornimenti reclutabile; controlla il molo della nave.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.82522,
+      "y": 0.45433,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:buccaneer-brigand-jones",
@@ -11017,7 +11097,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Reclutamento specialista · Specialista pesante reclutabile; cerca nella parte meridionale della località.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.27448,
+      "y": 0.27044,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:kawaii-team-leader",
@@ -11028,7 +11112,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Reclutamento specialista · Specialista medico reclutabile; cerca nel complesso della fortezza.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.79,
+      "y": 0.24,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:nami",
@@ -11039,7 +11127,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca sulla spiaggia a sud del villaggio.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.27448,
+      "y": 0.27044,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:roronoa-zoro",
@@ -11050,7 +11142,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca attorno al POI e segui il simbolo del dialogo nella minimappa.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.17478,
+      "y": 0.53234,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:monkey-d--luffy",
@@ -11061,7 +11157,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca nel centro abitato, vicino anche a Usopp.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.46953,
+      "y": 0.31661,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:sanji",
@@ -11072,7 +11172,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca nella parte orientale dell’isola più meridionale della zona.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.80209,
+      "y": 0.23385,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "npc:treasure-2026:usopp",
@@ -11083,7 +11187,11 @@
       "searchHint": "Treasure Hunters novembre 2026 · Attivazione Rift · Rift; cerca nel centro abitato, vicino anche a Luffy.",
       "accuracy": "approximate",
       "source": "Guida editoriale Beebom",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-npc-location-map-services/",
+      "x": 0.46953,
+      "y": 0.31661,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "hidden:treasure-2026:puzzle-waterfall",
@@ -11094,7 +11202,11 @@
       "searchHint": "Treasure Hunters · cerca / interagisci / completa · Attraversa la cascata a est del forte, rompi il muro, passa nel varco e usa un’emote vicino al muro in fondo per aprire la stanza del bottino.",
       "accuracy": "approximate",
       "source": "Guida editoriale verificata",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-puzzle-guide/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-puzzle-guide/",
+      "x": 0.8,
+      "y": 0.24,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "hidden:treasure-2026:puzzle-frogs",
@@ -11105,7 +11217,11 @@
       "searchHint": "Treasure Hunters · cerca / interagisci / completa · A sud di Lantern Landing, nel punto chiamato Giant’s Battlefield, gira le tre statue di rana verso la struttura centrale per far comparire due forzieri rari.",
       "accuracy": "approximate",
       "source": "Guida editoriale verificata",
-      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-puzzle-guide/"
+      "sourceUrl": "https://beebom.com/fortnite-treasure-hunters-puzzle-guide/",
+      "x": 0.39459,
+      "y": 0.59365,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     },
     {
       "id": "hidden:treasure-2026:fragment-3",
@@ -11116,8 +11232,12 @@
       "searchHint": "Treasure Hunters · cerca / interagisci / completa · Cerca il frammento sotto un albero di fronte al Crusty Cod, vicino alla recinzione. Missione disponibile dalla settimana del 15 novembre.",
       "accuracy": "approximate",
       "source": "Guida editoriale verificata",
-      "sourceUrl": "https://www.icrewplay.com/fortnite-frammenti-mappa-posizioni/"
+      "sourceUrl": "https://www.icrewplay.com/fortnite-frammenti-mappa-posizioni/",
+      "x": 0.32712,
+      "y": 0.87,
+      "projection": "zone-estimate",
+      "mapNote": "TAG DI ZONA: posizione approssimativa; consultare la descrizione"
     }
   ],
-  "status": "Coordinate solo se verificate; NPC da fonte configurata o catalogo manuale"
+  "status": "Tag stimati segnalati come approssimativi; NON sono coordinate precise"
 }
