@@ -48,14 +48,88 @@ def coords(entry):
     return {}
 
 
+def zone_key(value):
+    import re
+    import unicodedata
+    norm = unicodedata.normalize('NFD', str(value or ''))
+    norm = ''.join(ch for ch in norm if unicodedata.category(ch) != 'Mn').lower()
+    return ' '.join(re.findall(r'[a-z0-9]+', norm))
+
+
+def estimated_poi_points(pois):
+    """Stima grossolana dal rettangolo dei POI; NON una proiezione GIS esatta.
+
+    Serve solo per un TAG DI ZONA, senza millantare coordinate precise.
+    I POI e l'immagine vanno letti nella stessa risposta della stessa stagione.
+    """
+    valid = [p for p in pois if isinstance(p, dict) and isinstance(p.get('location'), dict)
+             and type(p['location'].get('x')) in (int, float)
+             and type(p['location'].get('y')) in (int, float)]
+    if len(valid) < 5:
+        return {}
+    xs = [p['location']['x'] for p in valid]
+    ys = [p['location']['y'] for p in valid]
+    span = max(max(xs) - min(xs), max(ys) - min(ys))
+    if span <= 0:
+        return {}
+    cx, cy = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
+    return {zone_key(p.get('name')): {
+        'x': round(max(0.06, min(0.94, .5 + (p['location']['x'] - cx) * .74 / span)), 5),
+        'y': round(max(0.06, min(0.94, .5 - (p['location']['y'] - cy) * .74 / span)), 5),
+    } for p in valid if text(p.get('name'))}
+
+
 def parse_map(payload):
     root = payload.get('data', payload)
-    return [{
-        'id': 'poi:' + text(p.get('id') or p.get('name'), 110),
-        'kind': 'Location', 'name': text(p.get('name'), 110),
-        'description': 'Punto di interesse riportato da Fortnite-API',
-        'source': 'Fortnite-API', 'sourceUrl': URLS['map'], **coords(p),
-    } for p in entries(root.get('pois')) if isinstance(p, dict) and text(p.get('name'))][:350]
+    pois = entries(root.get('pois'))
+    projected = estimated_poi_points(pois)
+    output = []
+    for p in pois:
+        if not isinstance(p, dict) or not text(p.get('name')):
+            continue
+        point = coords(p)
+        approximate = not bool(point)
+        if not point:
+            point = projected.get(zone_key(p['name']), {})
+        output.append({
+            'id': 'poi:' + text(p.get('id') or p.get('name'), 110),
+            'kind': 'Location', 'name': text(p.get('name'), 110),
+            'description': 'Punto d’interesse riportato da Fortnite-API',
+            'source': 'Fortnite-API', 'sourceUrl': URLS['map'],
+            'accuracy': 'approximate' if approximate else 'precise',
+            'projection': 'poi-bounds-estimate' if approximate else 'normalized',
+            **point,
+        })
+    return output[:350]
+
+
+def add_zone_estimates(items):
+    """Assegna un point approssimato soltanto in presenza di una zona individuabile."""
+    points = {zone_key(i['name']): {'x':i['x'], 'y':i['y']}
+              for i in items if i.get('kind') == 'Location' and coords(i)}
+    # Friendship Villa ha sostituito Rubber Resort nel novembre 2026.
+    aliases = {'friendship villa': 'rubber resort'}
+    # Questi due riferimenti derivano da guide di novembre 2026; non sono pin esatti.
+    regional = {
+        'friendship villa': {'x': 0.79, 'y': 0.18},
+        'lil uzi s stronghold': {'x': 0.79, 'y': 0.24},
+        'fortune s fort': {'x': 0.80, 'y': 0.24},
+    }
+    for item in items:
+        if item.get('kind') == 'Location' or coords(item):
+            continue
+        key = zone_key(item.get('zoneName'))
+        if not key:
+            continue
+        anchor = points.get(aliases.get(key, key))
+        if anchor is None:
+            anchor = regional.get(key)
+        if anchor:
+            item.update(anchor)
+            item['accuracy'] = 'approximate'
+            item['projection'] = 'zone-estimate'
+            item['mapNote'] = 'TAG DI ZONA: posizione approssimativa; consultare la descrizione'
+    return items
 
 
 def quest_objectives(quest):
@@ -175,12 +249,12 @@ def main():
     for item in fresh:
         if isinstance(item, dict) and item.get('name') and item.get('kind') in KINDS:
             unique[(item['kind'], item.get('id') or item['name'])] = item
-    items = list(unique.values()) or previous
+    items = add_zone_estimates(list(unique.values()) or previous)
     output = {
         'schemaVersion': 3, 'generatedAt': NOW,
         'lastSuccessfulDataAt': NOW if any_success else old.get('lastSuccessfulDataAt'),
         'sourceStatus': statuses, 'items': items,
-        'status': 'Coordinate solo se verificate; NPC da fonte configurata o catalogo manuale',
+        'status': 'Tag stimati segnalati come approssimativi; NON sono coordinate precise',
     }
     OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Pubblicati', len(items), 'elementi')
