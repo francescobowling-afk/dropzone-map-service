@@ -1,37 +1,37 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-11-27T18:50:54.317964+00:00",
-  "lastSuccessfulDataAt": "2026-11-27T18:50:54.317964+00:00",
+  "generatedAt": "2026-11-28T00:58:58.465147+00:00",
+  "lastSuccessfulDataAt": "2026-11-28T00:58:58.465147+00:00",
   "sourceStatus": {
     "npc": {
       "ok": false,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "error": "Nessuna API NPC automatica configurata; controllare npcCurated per le schede editoriali"
     },
     "map": {
       "ok": true,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "count": 16
     },
     "quests": {
       "ok": true,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "count": 1200
     },
     "curated": {
       "ok": true,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "count": 14
     },
     "npcCurated": {
       "ok": true,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "count": 11,
       "mode": "schede editoriali, non feed automatico"
     },
     "hiddenCurated": {
       "ok": true,
-      "checkedAt": "2026-11-27T18:50:54.317964+00:00",
+      "checkedAt": "2026-11-28T00:58:58.465147+00:00",
       "count": 3
     }
   },
